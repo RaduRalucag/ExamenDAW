@@ -1,4 +1,8 @@
 ﻿using AutoMapper;
+using ExamenDAW.Models.Eveniment;
+using ExamenDAW.Models.Eveniment.DTO;
+using ExamenDAW.Models.Participant;
+using ExamenDAW.Models.Participant.DTO;
 
 namespace ExamenDAW.Helpers
 {
@@ -7,6 +11,10 @@ namespace ExamenDAW.Helpers
         public MapperProfile()
         {
             // CreateMap<Source, Destination>();
+            CreateMap<Eveniment, EvenimentResponseDto>();
+            CreateMap<EvenimentRequestDto, Eveniment>();
+            CreateMap<Participant, ParticipantResponseDto>();
+            CreateMap<ParticipantRequestDto, Participant>();
         }
     }
 }
